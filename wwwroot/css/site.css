@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/736x/aa/c0/85/aac0855bc7b3ebc29bdc261f51b9ff81.jpg");
+    margin-bottom: 60px;
+}
+
+header ul {
+    list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+    padding: 0px;
+}
+
+header ul li{
+    margin-right: 10px;
+   
+}
+
