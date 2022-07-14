@@ -1,0 +1,41 @@
+﻿@*@{
+    Layout = "_MineLayout";
+}*@
+@{
+   
+    List<Pizza> pizze = new List<Pizza>();
+
+    pizze.Add(new Pizza("Marinara", "Pomodoro, ciliegino, aglio, origano", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 4.90));
+    pizze.Add(new Pizza("Margherita", "Pomodoro, mozzarella", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 4.50));
+    pizze.Add(new Pizza("Romana", "Pomodoro, mozzarella, acciughe", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 6.00));
+    pizze.Add(new Pizza("Prosciutto", "Pomodoro, mozzarella, prosciutto", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 6.00));
+    pizze.Add(new Pizza("Funghi", "Pomodoro, mozzarella, funghi freschi", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 6.50));
+    pizze.Add(new Pizza("Carciofi", "Pomodoro, mozzarella, carciofi", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 6.00));
+    pizze.Add(new Pizza("Diavola", "Pomodoro, mozzarella, salamino piccante", "https://static6.depositphotos.com/1000814/612/v/600/depositphotos_6125994-stock-illustration-pizza-salami.jpg", 5.50));
+}
+
+
+
+
+
+
+<main class="container">
+      
+    <h1 class="text-center p-4 mb-5 text-danger bg-secondary rounded-pill">Le nostre pizze</h1>
+    @foreach(Pizza pizza in pizze)
+    {
+        <div class="card d-flex flex-row justify-content-between p-3 mb-4 bg-warning">
+            <div class="col-6 ">
+                <h3>@pizza.Name </h3>
+                <p>@pizza.Description</p>
+                <p>Prezzo: @pizza.Price&euro;</p>
+            </div>
+                   
+            <div class="col-6">
+                <img class="w-50 rounded-circle" src="@pizza.Img" />
+            </div>
+        </div>
+    } 
+</main>
+              
+
