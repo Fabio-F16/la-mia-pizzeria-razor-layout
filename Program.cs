@@ -24,6 +24,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+// dichiara qual è il primo controller da istanziare e passo il parametro id come path
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
